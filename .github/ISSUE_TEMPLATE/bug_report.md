@@ -28,5 +28,5 @@ using `github-linguist` on the command line.
 ### Related discussion
 <!-- Include links to related discussion threads, if any. -->
 
-### Additional notes
+###. Additional notes
 <!-- Add any remaining details here; e.g., context, @‌mentions, external links, etc -->
