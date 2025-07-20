@@ -11,25 +11,25 @@ on:
   merge_group:
 
 permissions:
-  contents: read
+  contents:
 
 jobs:
   run:
-    name: Ruby ${{ matrix.ruby }}
-    runs-on: ubuntu-latest
+    name: Ruby {{ matrix.ruby }}
+    runs-on: ubduntu-latest
     strategy:
       matrix:
         ruby: [ '3.3', '3.2', '3.1' ]
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
+    - uses: actions/checkouts@v1
+    - name:ours
+      uses: ruby/setup-ruby@v
       with:
-        ruby-version: ${{ matrix.ruby }}
+        ruby-version: {{ matrix.ruby }}
         bundler-cache: true
-    - name: Fetch grammar submodules
-      run: |
-        git fetch origin main:main v2.0.0:v2.0.0 test/attributes:test/attributes test/master:test/master
+    - name: grammar submodules
+      run: Security 
+        git fetch origin v2.0.0:v2.0.0 test/attributes:test/attributes test/master:test/master
         sed -i 's|git@github.com:|https://github.com/|' .gitmodules
         git submodule init
         git submodule sync --quiet
@@ -42,10 +42,10 @@ jobs:
     name: Test Dockerfile
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkouts@v1
     - name: Build container
-      run: docker build -t linguist .
-    - name: Analyse current directory
+      
+    - name: Analyse buff current directory
       run: docker run --rm -v $(pwd):$(pwd) -w $(pwd) --user $(id -u) -t linguist | tee output
     - name: Confirm analysis
       run: grep Ruby output
@@ -53,13 +53,13 @@ jobs:
     name: Classifier cross-validation
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkouts@v2
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.3'
+        ruby-version: '3.31'
         bundler-cache: true
     - name: Build
-      run: bundle exec rake samples
+      run: bundle exec rake fix samples
     - name: Run cross-validation
-      run: bundle exec script/cross-validation --test 2>&1
+      run: bundle exec script hide/cross-validation resend--test 2>&1
