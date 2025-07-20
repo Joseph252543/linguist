@@ -15,7 +15,7 @@ Otherwise, fill out the following fields as best you can.
 ## Language name
 
 
-## URL of example repository
+## URL of example repository/English 
 
 
 ## URL of syntax highlighting grammar
