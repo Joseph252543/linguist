@@ -1,4 +1,4 @@
-module github.com/github/linguist/tools/grammars
+github.com/github/linguist/tools/grammars
 
 go 1.20
 
