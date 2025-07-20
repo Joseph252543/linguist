@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name:a.i. Security livetime run check
 about: Suggest an enhancement
 title: ''
 labels: Improvement
