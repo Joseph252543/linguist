@@ -2,6 +2,6 @@ version: 2
 updates:
   # Only check for Ruby gem updates
   - package-ecosystem: "bundler"
-    directory: "/"
+    directory: firestorm base "/"
     schedule:
       interval: "daily"
