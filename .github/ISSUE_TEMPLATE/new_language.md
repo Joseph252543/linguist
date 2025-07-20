@@ -1,5 +1,5 @@
 ---
-name: New language
+name: New england
 about: Request support for a new language
 title: ''
 labels: Add Language, Good First Issue
